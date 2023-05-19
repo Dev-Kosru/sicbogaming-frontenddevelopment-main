@@ -1,3 +1,28 @@
+@import url("https://fonts.cdnfonts.com/css/inter");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.pinkTextColor {
+  background: linear-gradient(180deg, #ffcdcc 0%, #ff989f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.yellowTextColor {
+  background: linear-gradient(180deg, #fffdcc 0%, #fff600 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pinkBorderColor {
+  border: 1px solid #ff989f;
+}
