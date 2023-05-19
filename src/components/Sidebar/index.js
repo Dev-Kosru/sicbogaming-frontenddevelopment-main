@@ -1,5 +1,6 @@
 import React from "react";
 import UpperBox from "./UpperBox";
+import LowerBox from "./LowerBox";
 
 const Sidebar = () => {
   return (
@@ -10,6 +11,7 @@ const Sidebar = () => {
       }}
     >
       <UpperBox />
+      <LowerBox />
     </div>
   );
 };
