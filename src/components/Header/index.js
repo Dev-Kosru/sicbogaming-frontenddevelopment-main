@@ -4,7 +4,7 @@ import MenuRight from "./MenuRight";
 
 const Header = () => {
   return (
-    <div className="h-[60px] bg-[#26001A] w-full border flex justify-between items-center">
+    <div className="h-[60px] bg-[#26001A] w-full flex justify-between items-center">
       <MenuLeft />
       <MenuRight />
     </div>

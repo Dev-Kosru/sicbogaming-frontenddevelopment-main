@@ -37,7 +37,8 @@ const Lists = () => {
           key={index}
         >
           <div
-            className={`w-[50%] text-right px-5 font-bold text-[${item.color}]`}
+            className={`w-[50%] text-right px-5 font-bold`}
+            style={{ color: item.color }}
           >
             {item.name}
           </div>

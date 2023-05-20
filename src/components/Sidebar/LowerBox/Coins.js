@@ -45,9 +45,9 @@ const Coins = () => {
   ];
 
   return (
-    <div className="rounded-[10px] mx-auto border border-[#7C1F58] mt-4 flex gap-5 flex-wrap p-5">
+    <div className="rounded-[10px] mx-auto border border-[#7C1F58] mt-4 flex flex-wrap p-2">
       {coins.map((item, index) => (
-        <button key={index}>
+        <button key={index} className="w-1/4 p-3">
           <img src={item.icon} alt={item.value} className="h-[80px] w-[80px]" />
         </button>
       ))}
