@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div>
       <Header />
-      <div className="flex h-[calc(100vh_-_60px)] fixed w-full">
+      <div className="flex sm:h-full md:h-[calc(100vh_-_60px)] sm:relative md:fixed w-full">
         <PlayGround />
         <Sidebar />
       </div>

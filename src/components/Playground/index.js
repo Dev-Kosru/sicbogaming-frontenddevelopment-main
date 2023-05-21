@@ -6,7 +6,7 @@ import TimeLine from "./TimeLine";
 const PlayGround = () => {
   return (
     <div className="flex-1">
-      <div className="flex h-[450px]">
+      <div className="flex sm:w-full md:h-[450px]">
         <Screen />
         <SideBox />
       </div>

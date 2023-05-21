@@ -1,6 +1,6 @@
 import React from "react";
 
-const Coins = () => {
+const Coins = ({ mobile }) => {
   const coins = [
     {
       icon: "./assets/coins/5.png",
@@ -45,12 +45,21 @@ const Coins = () => {
   ];
 
   return (
-    <div className="rounded-[10px] mx-auto border border-[#7C1F58] mt-4 flex flex-wrap p-2">
-      {coins.map((item, index) => (
-        <button key={index} className="w-1/4 p-3">
-          <img src={item.icon} alt={item.value} className="h-[80px] w-[80px]" />
+    <div className="rounded-[10px] mx-auto border border-[#7C1F58] mt-4 flex sm:flex-nowrap md:flex-wrap p-2">
+      {(mobile ? coins.splice(0, 5) : coins).map((item, index) => (
+        <button key={index} className="sm:w-1/5 md:w-1/6 p-3">
+          <img
+            src={item.icon}
+            alt={item.value}
+            className="sm:h-[50px] md:h-[80px] sm:w-[50px] md:w-[80px]"
+          />
         </button>
       ))}
+      {mobile && (
+        <button className="sm:w-1/6 md:w-1/4 p-3">
+          <img src="./assets/coins/res.png" alt="More" className="w-[80px]" />
+        </button>
+      )}
     </div>
   );
 };
