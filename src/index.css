@@ -26,3 +26,7 @@ body {
 .pinkBorderColor {
   border: 1px solid #ff989f;
 }
+
+.listHover:hover {
+  background: linear-gradient(180deg, #7c1f58 0%, #21001b 100%);
+}
