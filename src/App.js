@@ -1,13 +1,16 @@
 import React from "react";
 import AnotherPage from "./pages/AnotherPage";
-// import Homepage from "./pages/Homepage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Homepage from "./pages/Homepage";
 
 const App = () => {
   return (
-    <div>
-      {/* <Homepage /> */}
-      <AnotherPage />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/lists" element={<AnotherPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

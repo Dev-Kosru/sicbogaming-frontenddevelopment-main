@@ -2,10 +2,11 @@ import React from "react";
 import Header from "../../components/Header";
 import Filters from "../../components/Filters";
 import DataTable from "../../components/DataTable";
+import Layout from "../../components/Layouts/Layout";
 
 const AnotherPage = () => {
   return (
-    <div>
+    <Layout>
       <Header />
       <div className="flex sm:h-full md:h-[calc(100vh_-_60px)] sm:relative md:fixed w-full sm:bg-none md:bg-[#110012] sm:px-0 md:px-[150px] sm:pt-0 md:pt-[40px]">
         <div className="bg-[#1C0017] h-full w-full sm:py-[15px] md:py-[20px] sm:px-[15px] md:px-[50px]">
@@ -21,7 +22,7 @@ const AnotherPage = () => {
           <DataTable />
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 
