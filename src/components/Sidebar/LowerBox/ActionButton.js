@@ -2,7 +2,7 @@ import React from "react";
 
 const ActionButton = () => {
   return (
-    <div className="flex justify-between mt-4 mb-10">
+    <div className="flex justify-between sm:mt-0 md:mt-4 sm:mb-4 md:mb-10 sm:px-5 md:px-0">
       <button className="relative">
         <img src="./assets/sidebar/btn.png" alt="ok" />
         <img

@@ -45,18 +45,18 @@ const Coins = ({ mobile }) => {
   ];
 
   return (
-    <div className="rounded-[10px] mx-auto border border-[#7C1F58] mt-4 flex sm:flex-nowrap md:flex-wrap p-2">
+    <div className="sm:rounded-none md:rounded-[10px] sm:mx-0 md:mx-auto border border-[#7C1F58] sm:border-b-0 md:border-b mt-4 flex sm:flex-nowrap md:flex-wrap sm:p-5 md:p-2 sm:gap-2 md:gap-0">
       {(mobile ? coins.splice(0, 5) : coins).map((item, index) => (
-        <button key={index} className="sm:w-1/5 md:w-1/4 p-3">
+        <button key={index} className="sm:w-1/5 md:w-1/4 sm:p-0 md:p-3">
           <img
             src={item.icon}
             alt={item.value}
-            className="sm:h-[50px] md:h-[80px] sm:w-[50px] md:w-full"
+            className="sm:h-[60px] md:h-[80px] sm:w-[60px] md:w-full"
           />
         </button>
       ))}
       {mobile && (
-        <button className="sm:w-1/6 md:w-1/4 p-3">
+        <button className="sm:w-1/6 md:w-1/4 sm:p-0 md:p-3">
           <img src="./assets/coins/res.png" alt="More" className="w-[80px]" />
         </button>
       )}

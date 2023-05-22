@@ -8,19 +8,25 @@ import SixthRow from "./SixthRow";
 import SeventhRow from "./SeventhRow";
 import Coins from "../../../Sidebar/LowerBox/Coins";
 import ActionButton from "../../../Sidebar/LowerBox/ActionButton";
+import EigthRow from "./EightRow";
 
 const Mobile = () => {
   return (
-    <div className="flex-col sm:flex md:hidden gap-2">
-      <FirstRow />
-      <SecondRow />
-      <ThirdRow />
-      <FourthRow />
-      <FifthRow />
-      <SixthRow />
-      <SeventhRow />
-      <Coins mobile />
-      <ActionButton />
+    <div>
+      <div className="flex-col sm:flex md:hidden gap-2 sm:px-3 md:px-0">
+        <FirstRow />
+        <SecondRow />
+        <ThirdRow />
+        <FourthRow />
+        <FifthRow />
+        <SixthRow />
+        <SeventhRow />
+      </div>
+      <div className="flex-col sm:flex md:hidden gap-2 pb-10">
+        <Coins mobile />
+        <ActionButton />
+        <EigthRow />
+      </div>
     </div>
   );
 };
