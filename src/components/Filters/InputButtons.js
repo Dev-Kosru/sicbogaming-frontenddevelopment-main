@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import Calendar from "./Calendar";
 import DropwDown from "./DropwDown";
+import { Context } from "../../App";
 
 const InputButtons = () => {
+  const { handleModal, ModalTypes } = useContext(Context);
+
   return (
     <div className="flex gap-1 md:gap-3 sm:justify-between items-center md:justify-start">
       <div className="flex items-center gap-3">
@@ -29,6 +32,7 @@ const InputButtons = () => {
         <img src="./assets/icons/six-square.png" alt="square" />
       </div>
       <button
+        onClick={() => handleModal(ModalTypes.playBackModal)}
         className="rounded-[5px] border border-[#FF005C] text-white p-2 px-5 flex items-center gap-3"
         style={{
           background: "linear-gradient(180deg, #FF005C 0%, #7B005B 100%)",

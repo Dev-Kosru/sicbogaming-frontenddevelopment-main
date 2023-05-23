@@ -43,16 +43,20 @@ const DataTable = () => {
   return (
     <div className="flex py-4">
       <table className="w-full">
-        {data.map((item, i) => (
-          <tr key={i}>
-            <td className="w-1/4 text-left text-[#FEB00C] py-2">{item.one}</td>
-            <td className="w-1/4 text-left text-white py-2">{item.two}</td>
-            <td className="w-1/4 text-center text-[#FEB00C] py-22">
-              {item.three}
-            </td>
-            <td className="w-1/4 text-center text-white py-2">{item.four}</td>
-          </tr>
-        ))}
+        <tbody>
+          {data.map((item, i) => (
+            <tr key={i}>
+              <td className="w-1/4 text-left text-[#FEB00C] py-2">
+                {item.one}
+              </td>
+              <td className="w-1/4 text-left text-white py-2">{item.two}</td>
+              <td className="w-1/4 text-center text-[#FEB00C] py-22">
+                {item.three}
+              </td>
+              <td className="w-1/4 text-center text-white py-2">{item.four}</td>
+            </tr>
+          ))}
+        </tbody>
       </table>
     </div>
   );

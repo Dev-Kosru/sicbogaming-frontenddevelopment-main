@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import Bars from "./Bars";
 import Audio from "./Audio";
+import { Context } from "../../../../App";
 
 const data = [
   {
@@ -18,11 +19,15 @@ const data = [
 ];
 
 const SoundModal = () => {
+  const { handleModal, ModalTypes } = useContext(Context);
   return (
     <div className="w-[600px] h-[700px] absolute right-[100px] top-[80px] bg-[#1C1C1C] border border-[#F3C3D1] px-[30px] py-[20px]">
       <div className="flex justify-center py-2 border-b border-b-[#F3C3D1] relative">
         <h5 className="text-white text-[24px] font-bold">Cài đặt âm lượng</h5>
-        <button className="absolute right-0 top-0">
+        <button
+          className="absolute right-0 top-0"
+          onClick={() => handleModal(ModalTypes.sound)}
+        >
           <img src="./assets/icons/cancel.png" alt="cancel" />
         </button>
       </div>
