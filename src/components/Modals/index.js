@@ -3,6 +3,7 @@ import SoundModal from "./MenuModal/SoundModal";
 import { Context } from "../../App";
 import CoinRangeModal from "./CoinRangeModal";
 import PlayBackModal from "./PlayBackModal";
+import BettingModal from "./BettingModal";
 
 const Modals = () => {
   const { modal, ModalTypes } = useContext(Context);
@@ -15,6 +16,8 @@ const Modals = () => {
         return <CoinRangeModal />;
       } else if (modal.modal_type === ModalTypes.playBackModal) {
         return <PlayBackModal />;
+      } else if (modal.modal_type === ModalTypes.bettingModal) {
+        return <BettingModal />;
       }
     }
   };
