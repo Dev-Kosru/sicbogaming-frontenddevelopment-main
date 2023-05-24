@@ -4,7 +4,7 @@ import Sidebar from "../../components/Sidebar";
 import PlayGround from "../../components/Playground";
 import Layout from "../../components/Layouts/Layout";
 
-const Homepage = () => {
+const Main = () => {
   return (
     <Layout>
       <Header />
@@ -16,4 +16,4 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
+export default Main;

@@ -8,6 +8,7 @@ const FirstRow = () => {
     {
       name: "Xỉu",
       value: "4~10",
+      bet: "",
       coin: "25.6k",
       user: 234,
       health: 42,
@@ -18,6 +19,7 @@ const FirstRow = () => {
     {
       name: "Lẻ",
       value: "",
+      bet: "",
       color: "#60BF3F",
       num: "1:1",
       row: 1,
@@ -86,6 +88,7 @@ const FirstRow = () => {
           three: "6",
         },
       ],
+      bet: "1000",
       num: "1:150",
       row: 2,
     },
@@ -122,6 +125,7 @@ const FirstRow = () => {
     {
       name: "Chẵn",
       value: "",
+      bet: "",
       color: "#FEB00C",
       num: "1:1",
       row: 1,
@@ -129,6 +133,7 @@ const FirstRow = () => {
     {
       name: "Tài",
       value: "11~17",
+      bet: "1000",
       coin: "5.6k",
       health: 34,
       user: 445,
@@ -143,7 +148,11 @@ const FirstRow = () => {
       {data.map((item, index) => (
         <div
           key={index}
-          className={`h-full flex flex-col border-r border-r-[#7C1F58] last:border-r-0 sm:${
+          className={`h-full flex flex-col ${
+            item.bet
+              ? "border border-[#FFCDCC]"
+              : "border-r border-r-[#7C1F58] last:border-r-0"
+          } sm:${
             item.name === "Lẻ" ||
             item.name === "Chẵn" ||
             item.row === 2 ||
@@ -151,7 +160,12 @@ const FirstRow = () => {
               ? "hidden"
               : "flex"
           } md:flex`}
-          style={{ width: `${(100 / 14) * item.row}%` }}
+          style={{
+            width: `${(100 / 14) * item.row}%`,
+            background: item.bet
+              ? "linear-gradient(180deg, #7C1F58 0%, #26001A 100%)"
+              : "",
+          }}
         >
           {item.row === 1 && <One item={item} />}
           {item.row === 2 && <Two item={item} />}

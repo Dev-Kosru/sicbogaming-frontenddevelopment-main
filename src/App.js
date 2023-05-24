@@ -1,7 +1,9 @@
 import React, { createContext, useState } from "react";
 import AnotherPage from "./pages/AnotherPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Homepage from "./pages/Homepage";
+import Main from "./pages/Main";
+import StartScreen from "./pages/StartScreen";
+import PickGame from "./pages/PickGame";
 
 export const Context = createContext();
 
@@ -21,8 +23,8 @@ const App = () => {
   };
 
   const [modal, setModal] = useState({
-    active: true,
-    modal_type: "COIN_RANGE_MODAL",
+    active: false,
+    modal_type: "",
   });
 
   const [alert, setAlert] = useState({
@@ -63,7 +65,9 @@ const App = () => {
         }}
       >
         <Routes>
-          <Route path="/" element={<Homepage />} />
+          <Route path="/" element={<StartScreen />} />
+          <Route path="/pick-game" element={<PickGame />} />
+          <Route path="/main" element={<Main />} />
           <Route path="/lists" element={<AnotherPage />} />
         </Routes>
       </Context.Provider>

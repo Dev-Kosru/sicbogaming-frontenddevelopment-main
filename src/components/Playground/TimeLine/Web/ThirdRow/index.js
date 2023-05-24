@@ -1,4 +1,5 @@
 import React from "react";
+import BetLabel from "../BetLabel";
 
 const ThirdRow = () => {
   const data = [
@@ -35,6 +36,7 @@ const ThirdRow = () => {
         {
           one: "6",
           two: "6",
+          bet: "500",
         },
         {
           one: "6",
@@ -96,12 +98,26 @@ const ThirdRow = () => {
             <>
               <div className="h-full flex items-center justify-center">
                 {item.cube.map((c, i) => (
-                  <div
-                    className="flex flex-col justify-center gap-2 w-full p-5 py-3 border-r border-r-[#7C1F58] last:border-r-0"
-                    key={i}
-                  >
-                    <img src={`./assets/cube/${c.one}.png`} alt={c.one} />
-                    <img src={`./assets/cube/${c.two}.png`} alt={c.two} />
+                  <div className="flex border-r border-r-[#7C1F58] last:border-r-0 px-2">
+                    <div
+                      className={`flex flex-col justify-center gap-2 w-full p-3 relative ${
+                        c.bet ? "border border-[#FFCDCC]" : ""
+                      }`}
+                      key={i}
+                      style={{
+                        background: c.bet
+                          ? "linear-gradient(180deg, #7C1F58 0%, #26001A 100%)"
+                          : "",
+                      }}
+                    >
+                      {c.bet && (
+                        <div className="absolute">
+                          <BetLabel data={c.bet} />
+                        </div>
+                      )}
+                      <img src={`./assets/cube/${c.one}.png`} alt={c.one} />
+                      <img src={`./assets/cube/${c.two}.png`} alt={c.two} />
+                    </div>
                   </div>
                 ))}
               </div>

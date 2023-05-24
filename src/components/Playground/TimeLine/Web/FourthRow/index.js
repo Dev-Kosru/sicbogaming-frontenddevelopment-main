@@ -1,4 +1,5 @@
 import React from "react";
+import BetLabel from "../BetLabel";
 
 const FourthRow = () => {
   const data = [
@@ -32,6 +33,7 @@ const FourthRow = () => {
       value: "5",
       name: "Năm",
       text: false,
+      bet: "1000",
     },
     {
       value: "6",
@@ -66,7 +68,23 @@ const FourthRow = () => {
           {!item.text && (
             <>
               <div className="flex justify-center">
-                <div className="flex items-center gap-2 px-5 border-r border-r-[#7C1F58] last:border-r-0">
+                <div
+                  className={`flex items-center gap-2 p-1 px-5 ${
+                    item.bet
+                      ? "border border-[#FFCDCC]"
+                      : "border-r border-r-[#7C1F58] last:border-r-0"
+                  } relative`}
+                  style={{
+                    background: item.bet
+                      ? "linear-gradient(180deg, #7C1F58 0%, #26001A 100%)"
+                      : "",
+                  }}
+                >
+                  {item.bet && (
+                    <div className="absolute left-0">
+                      <BetLabel data={item.bet} />
+                    </div>
+                  )}
                   <img
                     src={`./assets/cube/${item.value}.png`}
                     alt={item.value}

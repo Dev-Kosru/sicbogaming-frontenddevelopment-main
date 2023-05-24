@@ -1,4 +1,5 @@
 import React from "react";
+import BetLabel from "../BetLabel";
 
 const SecondRow = () => {
   const data = [
@@ -21,6 +22,7 @@ const SecondRow = () => {
     {
       value: "8",
       num: "1:8",
+      bet: "3000",
     },
     {
       value: "9",
@@ -65,17 +67,29 @@ const SecondRow = () => {
       {data.map((item, index) => (
         <div
           key={index}
-          className="h-full flex flex-col border-r border-r-[#7C1F58] last:border-r-0"
-          style={{ width: `${100 / 14}%` }}
+          className={`h-full flex flex-col relative ${
+            item.bet
+              ? "border border-[#FFCDCC]"
+              : "border-r border-r-[#7C1F58] last:border-r-0"
+          }`}
+          style={{
+            width: `${100 / 14}%`,
+            background: item.bet
+              ? "linear-gradient(180deg, #7C1F58 0%, #26001A 100%)"
+              : "",
+          }}
         >
-          <>
-            <div className="flex-1 flex flex-col items-center p-1">
-              <p className="text-[24px] font-bold text-white">{item.value}</p>
+          {item.bet && (
+            <div className="absolute top-0 left-0">
+              <BetLabel data={item.bet} />
             </div>
-            <div className="h-[30px] flex justify-center items-center text-white text-[14px]">
-              {item.num}
-            </div>
-          </>
+          )}
+          <div className="flex-1 flex flex-col items-center p-1">
+            <p className="text-[24px] font-bold text-white">{item.value}</p>
+          </div>
+          <div className="h-[30px] flex justify-center items-center text-white text-[14px]">
+            {item.num}
+          </div>
         </div>
       ))}
     </div>
