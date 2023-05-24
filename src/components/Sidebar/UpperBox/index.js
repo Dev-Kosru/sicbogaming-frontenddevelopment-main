@@ -28,8 +28,8 @@ const UpperBox = () => {
             <span className="text-[#92DBAE] text-[16px] ml-2">Giây</span>
           </h2>
         </div>
-        <div className="">
-          <div className="w-[400px] bg-[#292929] h-[8px]">
+        <div className="w-full">
+          <div className="w-full bg-[#292929] h-[8px]">
             <div
               className="w-[50%] h-full"
               style={{

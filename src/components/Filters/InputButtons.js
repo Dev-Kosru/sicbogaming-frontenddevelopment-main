@@ -9,7 +9,9 @@ const InputButtons = () => {
   return (
     <div className="flex gap-1 md:gap-3 sm:justify-between items-center md:justify-start">
       <div className="flex items-center gap-3">
-        <label className="text-white sm:hidden md:block">From</label>
+        <label className="text-white sm:hidden md:block text-[.8vw]">
+          From
+        </label>
         <Calendar />
         <div className="sm:hidden md:block">
           <DropwDown data={"00:00"} />

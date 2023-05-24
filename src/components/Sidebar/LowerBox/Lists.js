@@ -30,7 +30,7 @@ const Lists = () => {
   ];
 
   return (
-    <div className="w-[300px] rounded-[10px] mx-auto border border-[#7C1F58]">
+    <div className="w-[80%] rounded-[10px] mx-auto border border-[#7C1F58]">
       {data.map((item, index) => (
         <div
           className="px-3 py-[6px] flex last:border-b-0 border-b border-b-[#7C1F58]"

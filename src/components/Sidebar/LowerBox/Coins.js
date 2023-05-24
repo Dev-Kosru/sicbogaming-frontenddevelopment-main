@@ -51,7 +51,7 @@ const Coins = ({ mobile }) => {
           <img
             src={item.icon}
             alt={item.value}
-            className="sm:h-[60px] md:h-[80px] sm:w-[60px] md:w-full"
+            className="sm:h-[60px] sm:w-[60px] md:w-full md:h-full"
           />
         </button>
       ))}

@@ -111,7 +111,7 @@ const ThirdRow = () => {
                       }}
                     >
                       {c.bet && (
-                        <div className="absolute">
+                        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                           <BetLabel data={c.bet} />
                         </div>
                       )}
