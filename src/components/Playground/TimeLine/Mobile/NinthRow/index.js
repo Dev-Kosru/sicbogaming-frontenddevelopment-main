@@ -53,7 +53,7 @@ const data = [
   },
 ];
 
-const EigthRow = () => {
+const NinthRow = () => {
   return (
     <div className="flex">
       {data.map((item, i) => (
@@ -69,18 +69,8 @@ const EigthRow = () => {
           </div>
         </div>
       ))}
-      <div
-        className="flex border border-[#7C1F58] justify-center"
-        style={{
-          background: "linear-gradient(180deg, #7C1F58 0%, #21001B 100%)",
-        }}
-      >
-        <div className="flex p-2 justify-center items-center w-[60px]">
-          <img src="./assets/stats-up.png" alt="" className="w-full" />
-        </div>
-      </div>
     </div>
   );
 };
 
-export default EigthRow;
+export default NinthRow;

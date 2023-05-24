@@ -3,6 +3,7 @@ import Header from "../../components/Header";
 import Filters from "../../components/Filters";
 import DataTable from "../../components/DataTable";
 import Layout from "../../components/Layouts/Layout";
+import MobileDataTable from "../../components/DataTable/MobileDataTable";
 
 const AnotherPage = () => {
   return (
@@ -20,6 +21,7 @@ const AnotherPage = () => {
           </div>
           <Filters />
           <DataTable />
+          <MobileDataTable />
         </div>
       </div>
     </Layout>

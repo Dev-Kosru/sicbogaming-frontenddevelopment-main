@@ -13,6 +13,7 @@ const App = () => {
     coinRangeModal: "COIN_RANGE_MODAL",
     playBackModal: "PLAY_BACK_MODAL",
     bettingModal: "BETTING_MODAL",
+    menuModal: "MENU_SIDEBAR",
   };
 
   const AlertTypes = {

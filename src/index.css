@@ -44,5 +44,13 @@ body {
 }
 
 .listHover:hover {
-  background: linear-gradient(180deg, #7c1f58 0%, #21001b 100%);
+  background: linear-gradient(180deg, #7c1f58 0%, #21001b 100%) !important;
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+.btnHoverPink:hover {
+  background: linear-gradient(180deg, #ff005c 0%, #7b005b 100%) !important;
 }

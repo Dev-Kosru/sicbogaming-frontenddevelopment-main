@@ -7,7 +7,7 @@ const Card = ({ data }) => {
       style={{ width: `${100 / 8}%` }}
     >
       <div className="flex flex-col text-white p-1 justify-between gap-1 items-center">
-        <p className="font-bold">{data.value}</p>
+        <p className="font-bold sm:text-[14px]">{data.value}</p>
         <p className="text-[14px]">{data.type}</p>
       </div>
     </div>

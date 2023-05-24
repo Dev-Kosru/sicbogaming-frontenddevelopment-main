@@ -1,9 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import SoundModal from "./MenuModal/SoundModal";
 import { Context } from "../../App";
 import CoinRangeModal from "./CoinRangeModal";
 import PlayBackModal from "./PlayBackModal";
 import BettingModal from "./BettingModal";
+import MobileMenu from "./MenuModal/MobileMenu";
 
 const Modals = () => {
   const { modal, ModalTypes } = useContext(Context);
@@ -18,12 +19,26 @@ const Modals = () => {
         return <PlayBackModal />;
       } else if (modal.modal_type === ModalTypes.bettingModal) {
         return <BettingModal />;
+      } else if (modal.modal_type === ModalTypes.menuModal) {
+        return <MobileMenu />;
       }
     }
   };
 
+  useEffect(() => {
+    if (modal.active) {
+      document.body.classList.add("modal-open");
+    } else {
+      document.body.classList.remove("modal-open");
+    }
+
+    return () => {
+      document.body.classList.remove("modal-open");
+    };
+  }, [modal]);
+
   return (
-    <div className="fixed w-full h-screen top-0 left-0 bg-none z-50 flex justify-center items-center">
+    <div className="fixed w-full sm:h-[calc(100vh_-_50px)] md:h-[calc(100vh_-_60px)] top-[50px] sm:md:top-[60px] left-0 bg-none z-50 flex justify-center items-center">
       {getComponent()}
     </div>
   );

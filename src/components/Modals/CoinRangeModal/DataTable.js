@@ -46,14 +46,18 @@ const DataTable = () => {
         <tbody>
           {data.map((item, i) => (
             <tr key={i}>
-              <td className="w-1/4 text-left text-[#FEB00C] py-2">
+              <td className="w-1/4 text-left text-[#FEB00C] py-2 sm:text-[12px] md:text-[.8vw]">
                 {item.one}
               </td>
-              <td className="w-1/4 text-left text-white py-2">{item.two}</td>
-              <td className="w-1/4 text-center text-[#FEB00C] py-22">
+              <td className="w-1/4 text-left text-white py-2 sm:text-[12px] md:text-[.8vw]">
+                {item.two}
+              </td>
+              <td className="w-1/4 text-center text-[#FEB00C] py-22 sm:text-[12px] md:text-[.8vw]">
                 {item.three}
               </td>
-              <td className="w-1/4 text-center text-white py-2">{item.four}</td>
+              <td className="w-1/4 text-center text-white py-2 sm:text-[12px] md:text-[.8vw]">
+                {item.four}
+              </td>
             </tr>
           ))}
         </tbody>

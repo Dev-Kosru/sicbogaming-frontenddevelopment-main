@@ -32,7 +32,7 @@ const MenuRight = () => {
       keyword: "hamb-menu",
       sm: "block",
       md: "block",
-      modal_type: ModalTypes.coinRangeModal,
+      modal_type: ModalTypes.menuModal,
     },
   ];
 

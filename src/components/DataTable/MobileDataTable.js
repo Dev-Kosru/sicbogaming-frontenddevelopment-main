@@ -1,19 +1,5 @@
 import React from "react";
-
-const tableHeader = [
-  "Mã số phiếu",
-  "Thời gian",
-  "Bán",
-  "Tên trò chơi",
-  "Hộp bài",
-  "Ván",
-  "Loại cược",
-  "Tiền cược",
-  "Vòng cược có giá trị",
-  "Thua / Thắng",
-  "Kết quả",
-  "Chiếu lại",
-];
+import Row from "./Row";
 
 const tableData = [
   {
@@ -148,47 +134,14 @@ const tableData = [
   },
 ];
 
-const DataTable = () => {
+const MobileDataTable = () => {
   return (
-    <table class="table-auto w-full border-collapse sm:hidden md:table">
-      <thead>
-        <tr className="sm:text-[14px] md:text-[.8vw] sm:hidden md:table-row">
-          {tableHeader.map((item, i) => (
-            <th key={i} className="text-white py-2 px-3 bg-[#7C1F58]">
-              {item}
-            </th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        {tableData.map((item, i) => (
-          <tr
-            key={i}
-            className="border border-[#FF005C] bg-[#110012] sm:text-[14px] md:text-[.8vw]"
-          >
-            <td className="text-white py-2 px-3 text-center">{item.one}</td>
-            <td className="text-white py-2 px-3 text-center">{item.two}</td>
-            <td className="text-white py-2 px-3 text-center">{item.three}</td>
-            <td className="text-white py-2 px-3 text-center">{item.four}</td>
-            <td className="text-white py-2 px-3 text-center">{item.five}</td>
-            <td className="text-white py-2 px-3 text-center">{item.six}</td>
-            <td className="text-white py-2 px-3 text-center">{item.seven}</td>
-            <td className="text-white py-2 px-3 text-center">{item.eight}</td>
-            <td className="text-white py-2 px-3 text-center">{item.nine}</td>
-            <td className="text-white py-2 px-3 text-center">{item.ten}</td>
-            <td className="text-white py-2 px-3 text-center">{item.eleven}</td>
-            <td className="text-white py-2 px-3 text-center">
-              <img
-                src="./assets/icons/play.png"
-                alt="play"
-                className="m-auto"
-              />
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <div className="flex-col gap-3 sm:flex md:hidden">
+      {tableData.map((item, i) => (
+        <Row key={i} item={item} />
+      ))}
+    </div>
   );
 };
 
-export default DataTable;
+export default MobileDataTable;

@@ -1,9 +1,6 @@
 import React, { useContext } from "react";
 import { Context } from "../../App";
-import PinkAlert from "./PinkAlert";
-import YellowAlert from "./YellowAlert";
-import GreyAlert from "./GreyAlert";
-import GreenAlert from "./GreenAlert";
+import AlertComponent from "./AlertComponent";
 
 const Alerts = () => {
   const { alert, AlertTypes } = useContext(Context);
@@ -11,13 +8,13 @@ const Alerts = () => {
   const getComponent = () => {
     if (alert.active) {
       if (alert.alert_type === AlertTypes.pink) {
-        return <PinkAlert />;
+        return <AlertComponent type={"pink"} />;
       } else if (alert.alert_type === AlertTypes.yellow) {
-        return <YellowAlert />;
+        return <AlertComponent type={"yellow"} />;
       } else if (alert.alert_type === AlertTypes.grey) {
-        return <GreyAlert />;
+        return <AlertComponent type={"grey"} />;
       } else if (alert.alert_type === AlertTypes.green) {
-        return <GreenAlert />;
+        return <AlertComponent type={"green"} />;
       }
     }
   };
