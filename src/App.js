@@ -14,6 +14,7 @@ const App = () => {
     playBackModal: "PLAY_BACK_MODAL",
     bettingModal: "BETTING_MODAL",
     menuModal: "MENU_SIDEBAR",
+    selectCoinModal: "SELECT_COIN",
   };
 
   const AlertTypes = {
@@ -24,8 +25,8 @@ const App = () => {
   };
 
   const [modal, setModal] = useState({
-    active: false,
-    modal_type: "",
+    active: true,
+    modal_type: "SELECT_COIN",
   });
 
   const [alert, setAlert] = useState({

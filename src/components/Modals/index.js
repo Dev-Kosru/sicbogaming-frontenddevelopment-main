@@ -5,6 +5,7 @@ import CoinRangeModal from "./CoinRangeModal";
 import PlayBackModal from "./PlayBackModal";
 import BettingModal from "./BettingModal";
 import MobileMenu from "./MenuModal/MobileMenu";
+import SelectCoinModal from "./SelectCoinModal";
 
 const Modals = () => {
   const { modal, ModalTypes } = useContext(Context);
@@ -21,6 +22,8 @@ const Modals = () => {
         return <BettingModal />;
       } else if (modal.modal_type === ModalTypes.menuModal) {
         return <MobileMenu />;
+      } else if (modal.modal_type === ModalTypes.selectCoinModal) {
+        return <SelectCoinModal />;
       }
     }
   };
