@@ -43,7 +43,7 @@ const MobileMenu = () => {
             className="w-[30px]"
           />
 
-          <span>Cá cược tự động</span>
+          <span className="sm:text-[14px] md:text-[.8vw]">Cá cược tự động</span>
         </span>
         <Switch active={active} setActive={setActive} />
       </div>
